@@ -198,8 +198,17 @@
     </footer>  
     <script type="text/javascript" src="assets/js/config.js"></script>
     
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src= + mykey  ></script>
     <script type="text/javascript" src="assets/js/maps.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer>
+        var url = "https://maps.googleapis.com/maps/api/js?key=";
+        var mykey = config.MY_KEY;
+        console.log(mykey);
+        var script = document.createElement("script");
+        script.src = url + mykey;
+        document.body.appendChild(script);
+    </script>
+    
+   
 </body>
 </html>
